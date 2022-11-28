@@ -138,7 +138,7 @@ jobs:
         run: echo "${{github.run_id}}" > VERSION
       - name: Compile
         run: haxelib run lime build html5 --app-version="4.0.0-${{ github.run_id}}"
-  name: Deploy Code to Release Branch
+name: Deploy Code to Release Branch
 on:
   workflow_dispatch:
 
@@ -158,4 +158,4 @@ jobs:
           branch: releases/v4
           folder: export/release/html5/bin
           clean: false
-          single-commit: true       
+          single-commit: true         
