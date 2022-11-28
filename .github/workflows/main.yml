@@ -143,8 +143,4 @@ jobs:
         with:
           name: HTML5Build
           path: export/release/html5/bin  
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.4.1
-        with:
-          folder: export/release/html5/bin
        
