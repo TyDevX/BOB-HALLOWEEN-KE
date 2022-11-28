@@ -11,7 +11,7 @@ import flixel.util.FlxColor;
 import lime.utils.Assets;
 
 
-#if desktop
+#if windows
 import Discord.DiscordClient;
 #end
 
@@ -41,7 +41,8 @@ class FreeplayState extends MusicBeatState
 
 		for (i in 0...initSonglist.length)
 		{
-			songs.push(new SongMetadata(initSonglist[i], 1, 'gf'));
+			var data:Array<String> = initSonglist[i].split(':');
+			songs.push(new SongMetadata(data[0], Std.parseInt(data[2]), data[1]));
 		}
 
 		/* 
@@ -52,7 +53,7 @@ class FreeplayState extends MusicBeatState
 			}
 		 */
 
-		 #if desktop
+		 #if windows
 		 // Updating Discord Rich Presence
 		 DiscordClient.changePresence("In the Menus", null);
 		 #end
@@ -62,10 +63,6 @@ class FreeplayState extends MusicBeatState
 		#if debug
 		isDebug = true;
 		#end
-
-			addWeek(['Sunshine', 'Withered', 'Run'], 1, ['bob', 'angrybob, 'hellbob']);
-			addWeek(['Ron', 'Trouble', 'Onslaught'], 2, ['ron', 'gloop-bob', 'glitched-bob']);
-			addWeek(['Moonrise', 'Ronman', 'little-man-halloween'], 3, ['bob', 'ron', 'little-man']);
 
 		// LOAD MUSIC
 
@@ -212,7 +209,6 @@ class FreeplayState extends MusicBeatState
 			PlayState.SONG = Song.loadFromJson(poop, songs[curSelected].songName.toLowerCase());
 			PlayState.isStoryMode = false;
 			PlayState.storyDifficulty = curDifficulty;
-
 			PlayState.storyWeek = songs[curSelected].week;
 			trace('CUR WEEK' + PlayState.storyWeek);
 			LoadingState.loadAndSwitchState(new PlayState());
@@ -251,7 +247,10 @@ class FreeplayState extends MusicBeatState
 
 		// NGio.logEvent('Fresh');
 		FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
-
+		if (songs[curSelected].songName == 'run')
+		{
+			
+		}
 		curSelected += change;
 
 		if (curSelected < 0)
