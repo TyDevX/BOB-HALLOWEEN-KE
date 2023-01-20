@@ -6,7 +6,7 @@ FNF Links: **[itch.io page](https://ninja-muffin24.itch.io/funkin) ⋅ [Newgroun
 # Credits
 
 ### Bob's Halloween Kade Engine Port
-- [Ty_1991](https://twitter.com/Ty_1991) - Did literally everything 
+- [SnesFX](https://twitter.com/SnesFX) - Did literally everything 
 
 ### Bob's Halloween (not complete since I don't know everyone who worked on this)
 - [AetherDX](https://twitter.com/AetherDX), [AyeTSG](https://twitter.com/AyeTSG) and [wildythomas](https://www.youtube.com/channel/UCrUhQeLDv7lpZifWfPr4uGQ) - Programming
