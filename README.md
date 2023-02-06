@@ -2,6 +2,9 @@
 
 *  A low effort port of the leaked bob build to ke.
 
+# How to build
+
+* [Use the ke build tutorial.](https://kadedev.github.io/Kade-Engine/building)
 
 # Credits
 
