@@ -1,3 +1,5 @@
+tutorial:gf:0
+
 Sunshine:bob:1
 Withered:angrybob:1
 run:hellbob:1
