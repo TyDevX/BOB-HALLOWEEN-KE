@@ -203,6 +203,4 @@
   <haxedef name="FEATURE_MULTITHREADING" if="cpp" />
 
   <!-- Defines whether the Mods menu will display before launching. -->
-  <haxedef name="FEATURE_MODCORE" if="desktop" />
-
 </project>
